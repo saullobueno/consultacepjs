@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>ConsultaCEP JS</title>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
 		<main>
@@ -14,13 +15,13 @@
 				<button type="submit">Consultar</button>
 			</form>
 
-			<div data-js="status"></div>
+			<div><h3 data-js="status"></h3></div>
 
 			<div data-js="cep-info">
 				<p><strong>Logradouro</strong>: <span data-js="logradouro"></span></p>
 				<p><strong>Bairro</strong>: <span data-js="bairro"></span></p>
-				<p><strong>Estado</strong>: <span data-js="estado"></span></p>
-				<p><strong>Cidade</strong>: <span data-js="cidade"></span></p>
+				<p><strong>Estado</strong>: <span data-js="uf"></span></p>
+				<p><strong>Cidade</strong>: <span data-js="localidade"></span></p>
 				<p><strong>CEP</strong>: <span data-js="cep"></span></p>
 			</div>
 		</main>
