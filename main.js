@@ -1,6 +1,7 @@
 (function(win, doc) {
 	let $formCEP = doc.querySelector('[data-js="form-cep"]');
 	let $inputCEP = doc.querySelector('[data-js="input-cep"]');
+	let $cepInfo = doc.querySelector('[data-js="cep-info"]');
 	let $logradouro = doc.querySelector('[data-js="logradouro"]');
 	let $bairro = doc.querySelector('[data-js="bairro"]');
 	let $localidade = doc.querySelector('[data-js="localidade"]');
@@ -48,6 +49,7 @@
 			$localidade.innerHTML = null;
 			$uf.innerHTML = null;
 			$cep.innerHTML = null;
+			$cepInfo.style.padding = '15px';
 		}
 
 		$logradouro.innerHTML = '<strong>Logradouro: </strong>' + data.logradouro;
@@ -55,6 +57,7 @@
 		$localidade.innerHTML = '<strong>Localidade: </strong>' + data.localidade;
 		$uf.innerHTML = '<strong>Estado: </strong>' + data.uf;
 		$cep.innerHTML = '<strong>CEP: </strong>' + data.cep;
+		$cepInfo.style.padding = '15px';
 	}
 
 	function parseData() {
@@ -77,7 +80,6 @@
 	}
 
 	function replaceCEP(message) {
-		let cep = clearCEP();
 		return message.replace('[CEP]', clearCEP());
 	}
 })(window, document);

@@ -51,13 +51,16 @@ button {
 	font-weight: bold;
 }
 div.cep-info {
-	display: block;
 	margin-top: 10px;
 	background-color: #eee;
-	padding: 15px;
 }
 p {
 	line-height: 1.5rem;
+}
+p.status {
+	font-weight: bold;
+	color: #aaa;
+	text-align: center;
 }
 p strong {
 	color: #aaa;
