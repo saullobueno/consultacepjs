@@ -8,21 +8,21 @@
 	</head>
 	<body>
 		<main>
-			<h1>ConsultaCEP JS</h1>
+			<div>
+				<h1>ConsultaCEP JS</h1>
+				<form class="box" data-js="form-cep">
+					<input type="text" data-js="input-cep" />
+					<button type="submit">Consultar</button>
+				</form>
 
-			<form data-js="form-cep">
-				<input type="text" data-js="input-cep" />
-				<button type="submit">Consultar</button>
-			</form>
-
-			<div><h3 data-js="status"></h3></div>
-
-			<div data-js="cep-info">
-				<p><strong>Logradouro</strong>: <span data-js="logradouro"></span></p>
-				<p><strong>Bairro</strong>: <span data-js="bairro"></span></p>
-				<p><strong>Estado</strong>: <span data-js="uf"></span></p>
-				<p><strong>Cidade</strong>: <span data-js="localidade"></span></p>
-				<p><strong>CEP</strong>: <span data-js="cep"></span></p>
+				<div class="cep-info" data-js="cep-info">
+					<p><strong data-js="status"></strong></p>
+					<p data-js="logradouro"></p>
+					<p data-js="bairro"></p>
+					<p data-js="uf"></p>
+					<p data-js="localidade"></p>
+					<p data-js="cep"></p>
+				</div>
 			</div>
 		</main>
 		<script src="main.js"></script>

@@ -43,24 +43,18 @@
 		let data = parseData();
 		if (!data) {
 			getMessage('error');
-			data = clearData();
+			$logradouro.innerHTML = null;
+			$bairro.innerHTML = null;
+			$localidade.innerHTML = null;
+			$uf.innerHTML = null;
+			$cep.innerHTML = null;
 		}
 
-		$logradouro.textContent = data.logradouro;
-		$bairro.textContent = data.bairro;
-		$localidade.textContent = data.localidade;
-		$uf.textContent = data.uf;
-		$cep.textContent = data.cep;
-	}
-
-	function clearData() {
-		return {
-			logradouro: null,
-			bairro: null,
-			localidade: null,
-			uf: null,
-			cep: null
-		};
+		$logradouro.innerHTML = '<strong>Logradouro: </strong>' + data.logradouro;
+		$bairro.innerHTML = '<strong>Bairro: </strong>' + data.bairro;
+		$localidade.innerHTML = '<strong>Localidade: </strong>' + data.localidade;
+		$uf.innerHTML = '<strong>Estado: </strong>' + data.uf;
+		$cep.innerHTML = '<strong>CEP: </strong>' + data.cep;
 	}
 
 	function parseData() {
@@ -75,9 +69,9 @@
 
 	function getMessage(type) {
 		let messages = {
-			loading: replaceCEP('Buscando informações para o CEP [CEP]...'),
-			ok: replaceCEP('Endereço referente ao CEP [CEP]:'),
-			error: replaceCEP('Não encontramos o endereço para o CEP [CEP].')
+			loading: 'Buscando informações...',
+			ok: 'ENDEREÇO ENCONTRADO:',
+			error: replaceCEP('Não encontramos o endereço para o CEP [CEP]')
 		};
 		$status.textContent = messages[type];
 	}

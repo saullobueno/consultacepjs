@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+	min-height: 100%;
+}
+main {
+	height: 100%;
+	min-height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+form.box {
+	display: flex;
+	background-color: #eee;
+}
+
+h1 {
+	text-align: center;
+	color: #ccc;
+}
+input,
+button {
+	color: #666;
+}
+input {
+	width: 70%;
+	height: 50px;
+	padding: 0 10px;
+	border: solid 1px #eee;
+	font-size: 1.5rem;
+}
+button {
+	text-align: center;
+	background: #eee;
+	border: none;
+	width: 30%;
+	height: 50px;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+div.cep-info {
+	display: block;
+	margin-top: 10px;
+	background-color: #eee;
+	padding: 15px;
+}
+p {
+	line-height: 1.5rem;
+}
+p strong {
+	color: #aaa;
+	margin-right: 5px;
+}
